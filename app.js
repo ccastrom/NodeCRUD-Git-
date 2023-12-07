@@ -1,8 +1,11 @@
 
 require('dotenv').config()
+const routeVehicles=require('./routes/vehicles')
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3000
+
+app.use('/api/vehicles',routeVehicles);
 
 
 

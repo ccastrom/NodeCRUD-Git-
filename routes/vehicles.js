@@ -19,3 +19,6 @@ router.put('/id',(req,res)=>{
 router.delete('/id',(req,res)=>{
     //DELETE a vehicle by ID req.params.id
 })
+
+
+module.exports=router;
