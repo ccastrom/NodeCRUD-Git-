@@ -10,15 +10,20 @@ var carsList=[
 
 
 router.get('/',(req,res)=>{
-    //SELECT ALL VEHICLES
+   res.send(carsList)
 });
 
 router.get('/:id',(req,res)=>{
-    //SELECT A VEHICLE BY ID req.params.id
+    var carID= req.params.id;
+    const getCarByID=carsList.find(c=>c.id===parseInt(carID));
+    console.log(getCarByID);
+    res.send(getCarByID);
+
+    
 })
 
 router.post('/',(req,res)=>{
-    //CREATE A VEHICLE ||req.body 
+    console.log(req.body)
 })
 
 router.put('/id',(req,res)=>{
