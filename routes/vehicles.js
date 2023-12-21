@@ -23,7 +23,19 @@ router.get('/:id',(req,res)=>{
 })
 
 router.post('/',(req,res)=>{
-    console.log(req.body)
+    const createCar=req.body
+    const newCar={
+        id: carsList.length+1,
+        brand:createCar.brand,
+        model:createCar.model,
+        Year:createCar.Year
+
+    };
+    
+    carsList.push(newCar);
+    res.send(carsList);
+
+
 })
 
 router.put('/id',(req,res)=>{
