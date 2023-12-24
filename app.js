@@ -1,5 +1,6 @@
 
 require('dotenv').config()
+const Joi=require('joi');
 const routeVehicles=require('./routes/vehicles')
 const express = require('express')
 const app = express()
