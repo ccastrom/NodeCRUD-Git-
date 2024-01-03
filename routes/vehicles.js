@@ -59,13 +59,21 @@ router.put('/:id', (req, res) => {
     const car = carsList.find(c => c.id === parseInt(req.params.id));
 
     if (!car) return res.status(404).send('The car with the given ID was not found')
-    const getCar = req.body;
+    const {error,value}=validateCar(req.body);
+    if(!error){
+        car.brand=value.brand;
+        car.model=value.model;
+        car.Year=value.Year;
+        res.send(car);
 
-    car.brand = getCar.brand;
-    car.model = getCar.model;
-    car.Year = getCar.Year;
+    }else{
+        const message=error.details[0].message;
+        console.log(message);
+        res.status(400).send(message);
+    }
+  
 
-    res.send(car);
+  
 
 
 })
