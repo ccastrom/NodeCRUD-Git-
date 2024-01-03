@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express()
+const validateCar=require('../validate')
 
 var carsList = [
     { id: 1, brand: 'Toyota', model: 'Corolla', Year: 2020 },
@@ -26,17 +27,29 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    const createCar = req.body
-    const newCar = {
+
+    const {error,value}=validateCar(req.body);
+    if(!error){
+       
+        const newCar = {
         id: carsList.length + 1,
-        brand: createCar.brand,
-        model: createCar.model,
-        Year: createCar.Year
+        brand: value.brand,
+        model: value.model,
+        Year: value.Year
 
     };
 
     carsList.push(newCar);
     res.send(carsList);
+
+    }else{
+       
+            const message=error.details[0].message;
+            console.log(message);
+            res.status(400).send(message);
+        
+    }
+    
 
 
 })
