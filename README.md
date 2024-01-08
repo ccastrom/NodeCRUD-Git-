@@ -4,6 +4,6 @@ The main goal of this repository is to apply the basic Git commands in the versi
 
 # :mag: Flow visualization
 ![flow](https://github.com/ccastrom/NodeCRUD-Git-/assets/33319281/3cea5887-5e03-4e6a-a1c6-65f11079415e)
-https://github.com/ccastrom/NodeCRUD-Git-/assets/33319281/f8debee4-8b3f-49e7-b525-5847ec5c89d1
 
+https://github.com/ccastrom/NodeCRUD-Git-/assets/33319281/0d50ec22-849f-4456-b197-1d2d31acac61
 
