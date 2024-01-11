@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Git Fundamentals ...
 =======
 # [![My Skills](https://skillicons.dev/icons?i=git)](https://skillicons.dev) Git Fundamentals 
@@ -31,4 +31,4 @@ The 'routes' branch has the function of performing basic operations for data man
 The user 'ccastrom2' is responsible for performing validations for the 'vehicles' route using 'joi'. Once each task is completed, a pull request is sent to the original project user for them to accept the changes.
 
 >(validate.js, vehicles.js)
->>>>>>> 2fef96f (Update README.md)
+
